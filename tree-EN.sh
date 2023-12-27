@@ -33,7 +33,7 @@ new_year=$(date +'%Y')
 let new_year++
 tput setaf 1; tput bold
 tput cup $lin $((c - 6)); echo С Новым Годом и Рождеством!
-tput cup $((lin + 1)) $((c - 10)); echo Профессиональных успехов в $new_year ! от всего коллектива HelpTeam! 
+tput cup $((lin + 1)) $((c - 10)); echo Профессиональных успехов в $new_year ! от всего коллектива HelpTeam
 let c++
 k=1
 
@@ -57,14 +57,14 @@ while true; do
         column[$k$i]=$co
         color=$(((color+1)%8))
         # Flashing text
-        sh=1
-        for l in C O D E
-        do
-            tput cup $((lin+1)) $((c+sh))
-            echo $l
-            let sh++
-            sleep 0.01
-        done
+        #sh=1
+        #for l in C O D E
+        #do
+        #    tput cup $((lin+1)) $((c+sh))
+        #    echo $l
+        #    let sh++
+        #    sleep 0.01
+        #done
     }
     k=$((k % 2 + 1))
 done
